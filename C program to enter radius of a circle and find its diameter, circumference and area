@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+#define pi 3.14
+int rad,diameter;
+float cir,area;
+
+printf("enter the radius : ");
+scanf("%d",&rad);
+
+diameter=2*rad;
+cir=2*pi*rad;
+area=pi*rad*rad;
+
+printf("\ndiameter :%d \ncircumference : %f \narea : %f",diameter,cir,area);
+
+return 0;
+}
