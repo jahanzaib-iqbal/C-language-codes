@@ -16,3 +16,4 @@ printf("\ndiameter :%d \ncircumference : %f \narea : %f",diameter,cir,area);
 
 return 0;
 }
+ 
