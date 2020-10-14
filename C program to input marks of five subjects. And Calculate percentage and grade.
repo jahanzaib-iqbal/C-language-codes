@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+int sbj1,sbj2,sbj3,sbj4,sbj5,sum;
+float percentage;
+/*total marks per subject =100*/
+
+printf("Enter obtained marks in 1st subject:");
+scanf("%d",&sbj1);
+printf("Enter obtained marks in 2nd subject:");
+scanf("%d",&sbj2);
+printf("Enter obtained marks in 3rd subject:");
+scanf("%d",&sbj3);
+printf("Enter obtained marks in 4th subject:");
+scanf("%d",&sbj4);
+printf("Enter obtained marks in 5th subject:");
+scanf("%d",&sbj5);
+
+sum=sbj1+sbj2+sbj3+sbj4+sbj5;
+printf("Total marks :500\nObtained marks : %d",sum);
+
+percentage=(float)sum/500*100;
+printf("\nPercentage : %f\n",percentage);
+
+if(percentage>=90)
+    printf("grade : A");
+else if(percentage>=80)
+    printf("grade : B");
+else if(percentage>=70)
+    printf("grade : C");
+else if(percentage>=60)
+    printf("grade : D");
+else if(percentage>=50)
+    printf("grade : E");
+else
+    printf("grade : F");
+return 0;
+}
