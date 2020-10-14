@@ -1,0 +1,69 @@
+#include<stdio.h>
+int main()
+{
+    /*declaring the variables*/
+    int item_no,qty,price;
+    float disc,bill;
+
+    printf("WELCOME TO OUR MART!!!\n---------------------------\n");
+    //display item number, item name and rate
+    printf("Item no\tItem name\tRate");
+    printf("\n1111\tTable\t\t1750");
+    printf("\n2222\tChair\t\t680");
+    printf("\n3333\tboard\t\t975");
+    printf("\n4444\tmarker\t\t127");
+    printf("\n5555\tdesk\t\t520");
+    /*input item number and quantity*/
+
+    printf("\n\nEnter Item No.= ");
+    scanf("%d",&item_no);
+    printf("Enter quantity of items = ");
+    scanf("%d",&qty);
+
+    switch(item_no)                  //select and execute different case according to item number entered
+{
+    case 1111:                            //when item is table
+        printf("\nRequired Item : Table\nRate :Rs 1750 per table\n");
+        price=qty*1750;             //calculate total price
+    break;
+    case 2222:                    	      //when item is chair
+        printf("\nRequired Item : Chair\nRate:Rs 680 per chair\n");
+        price=qty*680;               //calculate total price
+    break;
+    case 3333:                             //when item is board
+        printf("\nRequired Item : Board\nRate :Rs 975 per Board\n");
+        price=qty*975;                //calculate total price
+    break;
+    case 4444:                           //when item is marker
+        printf("\nRequired Item : Marker\nRate :Rs 127 per marker\n");
+        price=qty*127;              //calculate total price
+    break;
+    case 5555:                        //when item is desk
+        printf("\nRequired Item : Desk\nRate :Rs 520 per duster\n");
+        price=qty*520;            //calculate the price
+    break;
+    }
+    if (item_no!=1111&&item_no!=2222&&item_no!=3333&&item_no!=4444&&item_no!=5555)     
+                                                /*when input is other than mentioned codes*/
+        printf("INVALID ITEM NUMBER!!!");
+
+    else                                        //when input is from one of the above mentioned codes
+{
+    printf("\nNo. of items purchased : %d\nTotal Price : Rs%d",qty,price);
+    if (price>10000)                    //condition for discount
+    {
+        printf("\n\"Since total Price is greater than 10000,you are offered 10 percent Discount!\"");
+
+        disc=(float)price*0.1;        /*when total price is greater than 10,000*/
+    }
+    else    disc=0;
+
+    printf("\nDiscount : Rs %f",disc);
+
+    bill=(float)price-disc;              //final Bill with discount
+
+    printf("\nTotal Bill(after discount):Rs %f ",bill);
+    printf("\n\nTHANKS FOR SHOPPING HERE!!!\n--------------------------\n");
+}
+    return 0;
+}
