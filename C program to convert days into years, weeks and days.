@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+int D,W,Y;
+int RD;
+
+printf("enter days : ");
+scanf(" %d",&D);
+
+Y=D/365;
+W=((D%365)/7);
+RD=(D-((W*7)+(Y*365)));
+
+printf("%d equals to: \n\n %d years, %d weeks,%d days",D,Y,W,RD);
+
+return 0;
+}
