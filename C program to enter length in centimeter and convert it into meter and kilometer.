@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+float cm,m,km;
+
+printf("enter length in centimeters : ");
+scanf("%f",&cm);
+
+m=cm/100;
+km=cm/100000;
+
+printf("\nlength in meters : %f \nlength in kilometers : %f\n",m,km);
+
+return 0;
+}
