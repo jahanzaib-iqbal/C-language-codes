@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+float tc,tf;
+
+printf("enter temperature in Celsius  : ");
+scanf("%f",&tc);
+
+tf=(float)(tc*1.8+32);
+
+printf("\ntemperature in Fahrenheit : %f",tf);
+
+return 0;
+}
