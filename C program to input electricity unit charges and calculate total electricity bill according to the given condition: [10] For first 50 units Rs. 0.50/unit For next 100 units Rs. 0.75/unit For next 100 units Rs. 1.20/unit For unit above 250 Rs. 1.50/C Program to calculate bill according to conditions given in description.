@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+    int units;
+    float surcharge,bill,total;
+    printf("Enter number of units");
+    scanf("%d",&units);
+
+    if(units<=50)
+        {
+            bill=units*0.50;
+        printf("Bill  : %f",bill);
+        }
+    else if (units<=150)
+        {
+            bill=((50*0.5)+((units-50)*0.75));
+        printf("Bill  : %f",bill);
+        }
+    else if(units<=250)
+        {
+            bill=((50*0.5)+(100*0.75)+((units-150)*1.20));
+        printf("Bill  : %f",bill);
+        }
+    else if(units>250)
+        {
+            bill=((50*0.5)+(100*0.75)+(100*1.20)+((units-250)*1.50));
+        printf("Bill  : %f",bill);
+        }
+
+
+        surcharge=.2*bill;
+
+        printf("\n\nsurcharge=%f",surcharge);
+        total=bill+surcharge;
+
+        printf("\n\ntotal bill is : %f ",total);
+        printf("\n");
+    return 0;
+}
