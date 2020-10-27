@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	float x,y,sum,diff,prod,div;
+char op,ch;
+start:
+cout<<"Enter the 1st nmbr:";
+cin>>x;
+cout<<"Enter the operater:";
+cin>>op;
+cout<<"Enter the 2nd nmbr:";
+cin>>y;
+
+switch(op)
+
+{
+case '+':
+{
+sum=x+y;
+cout<<sum<<endl;
+break;
+}
+case '/':
+{
+div=x/y;
+cout<<div<<endl;
+break;
+}
+case '*':
+{
+prod=x*y;
+cout<<prod<<endl;
+break;
+}
+case '-':
+{
+diff=x-y;
+cout<<diff<<endl;
+break;    }
+}
+
+cout<<"do u want to do another calculation? \t (y/n)"<<endl;
+cin>>ch;
+if(ch=='y')
+{
+goto start;
+}
+else
+
+return 0;
+}
